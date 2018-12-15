@@ -86,7 +86,7 @@
 
        outtextxy(200,200,"Hey you loose the game.");
 
-free(BUFFER1);
+free(BUFFER1);   // to free space
 free(BUFFER2);
 free(BUFFER3);
 delay(2000);
@@ -117,12 +117,12 @@ delay(2000);
 
     if( y_axis < 0 )
      {
-      y_direction*=-1;
+      y_direction*=-1;   // to change direction
       y_axis=0;
      }
      if(kbhit())
      {
-      ch=getch();
+      ch=getch();     // to stop
       if(ch!=ESC)
       {
       putimage(80+X_POSITION,445+Y_POSITION,BUFFER2,XOR_PUT);
@@ -152,8 +152,8 @@ delay(2000);
 void print_line()
 {
 setcolor(WHITE);
-line(0,18,640,18);
-line(0,19,640,19);
+line(0,18,640,18);    // to thicken the top line which acts as a border
+line(0,19,640,19);   
 line(0,20,640,20);
 line(0,21,640,21);
 line(0,22,640,22);
@@ -162,8 +162,8 @@ line(0,22,640,22);
 
  void print_line2()
 {
-line(0,465,640,465);
-line(0,466,640,466);
+line(0,465,640,465);  // to thicken the bottom line which acts as a border
+line(0,466,640,466);  
 line(0,467,640,467);
 line(0,468,640,468);
 line(0,469,640,469);
